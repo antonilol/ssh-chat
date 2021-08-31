@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/shazow/rateio"
+	//"github.com/shazow/rateio"
 	"github.com/shazow/ssh-chat/chat"
 	"github.com/shazow/ssh-chat/chat/message"
 	"github.com/shazow/ssh-chat/internal/humantime"
@@ -180,7 +180,7 @@ func (h *Host) Connect(term *sshd.Terminal) {
 	if h.isOp(term.Conn) {
 		member.IsOp = true
 	}
-	ratelimit := rateio.NewSimpleLimiter(3, time.Second*3)
+	//ratelimit := rateio.NewSimpleLimiter(3, time.Second*3)
 
 	logger.Debugf("[%s] Joined: %s", term.Conn.RemoteAddr(), user.Name())
 
@@ -198,11 +198,11 @@ func (h *Host) Connect(term *sshd.Terminal) {
 			break
 		}
 
-		err = ratelimit.Count(1)
-		if err != nil {
-			user.Send(message.NewSystemMsg("Message rejected: Rate limiting is in effect.", user))
-			continue
-		}
+		//err = ratelimit.Count(1)
+		//if err != nil {
+			//user.Send(message.NewSystemMsg("Message rejected: Rate limiting is in effect.", user))
+			//continue
+		//}
 		if len(line) > maxInputLength {
 			user.Send(message.NewSystemMsg("Message rejected: Input too long.", user))
 			continue
