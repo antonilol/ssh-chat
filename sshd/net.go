@@ -4,7 +4,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/shazow/rateio"
+	//"github.com/shazow/rateio"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -13,7 +13,7 @@ type SSHListener struct {
 	net.Listener
 	config *ssh.ServerConfig
 
-	RateLimit   func() rateio.Limiter
+	//RateLimit   func() rateio.Limiter
 	HandlerFunc func(term *Terminal)
 }
 
@@ -28,10 +28,10 @@ func ListenSSH(laddr string, config *ssh.ServerConfig) (*SSHListener, error) {
 }
 
 func (l *SSHListener) handleConn(conn net.Conn) (*Terminal, error) {
-	if l.RateLimit != nil {
+	//if l.RateLimit != nil {
 		// TODO: Configurable Limiter?
-		conn = ReadLimitConn(conn, l.RateLimit())
-	}
+		//conn = ReadLimitConn(conn, l.RateLimit())
+	//}
 
 	// If the connection doesn't write anything back for too long before we get
 	// a valid session, it should be dropped.
