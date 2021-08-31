@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shazow/ssh-chat/chat/message"
-	"github.com/shazow/ssh-chat/internal/sanitize"
-	"github.com/shazow/ssh-chat/set"
+	"github.com/antonilol/ssh-chat/chat/message"
+	"github.com/antonilol/ssh-chat/internal/sanitize"
+	"github.com/antonilol/ssh-chat/set"
 )
 
 // ErrInvalidCommand is the error returned when an invalid command is issued.

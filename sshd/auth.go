@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/shazow/ssh-chat/internal/sanitize"
+	"github.com/antonilol/ssh-chat/internal/sanitize"
 	"golang.org/x/crypto/ssh"
 )
 

@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shazow/ssh-chat/chat"
-	"github.com/shazow/ssh-chat/chat/message"
-	"github.com/shazow/ssh-chat/internal/humantime"
-	"github.com/shazow/ssh-chat/internal/sanitize"
-	"github.com/shazow/ssh-chat/sshd"
+	"github.com/antonilol/ssh-chat/chat"
+	"github.com/antonilol/ssh-chat/chat/message"
+	"github.com/antonilol/ssh-chat/internal/humantime"
+	"github.com/antonilol/ssh-chat/internal/sanitize"
+	"github.com/antonilol/ssh-chat/sshd"
 )
 
 // Identity is a container for everything that identifies a client.

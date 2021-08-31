@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/shazow/ssh-chat/set"
-	"github.com/shazow/ssh-chat/sshd"
+	"github.com/antonilol/ssh-chat/set"
+	"github.com/antonilol/ssh-chat/sshd"
 	"golang.org/x/crypto/ssh"
 )
 

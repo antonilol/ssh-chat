@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/shazow/ssh-chat/chat/message"
+	"github.com/antonilol/ssh-chat/chat/message"
 )
 
 func TestAwayCommands(t *testing.T) {

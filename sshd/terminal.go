@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/shazow/ssh-chat/sshd/terminal"
+	"github.com/antonilol/ssh-chat/sshd/terminal"
 	"golang.org/x/crypto/ssh"
 )
 

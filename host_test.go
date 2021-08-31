@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/shazow/ssh-chat/chat/message"
-	"github.com/shazow/ssh-chat/sshd"
+	"github.com/antonilol/ssh-chat/chat/message"
+	"github.com/antonilol/ssh-chat/sshd"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/sync/errgroup"
 )

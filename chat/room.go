@@ -7,9 +7,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/shazow/ssh-chat/chat/message"
-	"github.com/shazow/ssh-chat/internal/humantime"
-	"github.com/shazow/ssh-chat/set"
+	"github.com/antonilol/ssh-chat/chat/message"
+	"github.com/antonilol/ssh-chat/internal/humantime"
+	"github.com/antonilol/ssh-chat/set"
 )
 
 const historyLen = 20
