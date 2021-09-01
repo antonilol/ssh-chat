@@ -61,7 +61,7 @@ func TestTheme(t *testing.T) {
 
 	msg := NewPublicMsg("hello", u)
 	actual = msg.Render(&colorTheme)
-	expected = "\033[38;05;5mfoo\033[0m: hello"
+	expected = "\033[38;05;5mfoo\033[0m: hello\033[0m"
 	if actual != expected {
 		t.Errorf("Got: %q; Expected: %q", actual, expected)
 	}
