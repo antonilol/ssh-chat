@@ -8,7 +8,7 @@ LDFLAGS = -X main.Version=$(VERSION) -extldflags "-static"
 
 all: $(BINARY)
 
-$(BINARY): **/**/*.go **/*.go *.go
+$(BINARY): **/**/**/*.go **/**/*.go **/*.go *.go
 	go build -ldflags "$(LDFLAGS)" ./cmd/ssh-chat
 
 build: $(BINARY)

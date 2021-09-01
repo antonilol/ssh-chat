@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 	"time"
+	"github.com/antonilol/ssh-chat/chat/message/color_tags"
 )
 
 // Message is an interface for messages.
@@ -109,7 +110,7 @@ func (m PublicMsg) Render(t *Theme) string {
 		return m.String()
 	}
 
-	return fmt.Sprintf("%s: %s", t.ColorName(m.from), m.body)
+	return fmt.Sprintf("%s: %s", t.ColorName(m.from), color_tags.ParseColorTags(m.body))
 }
 
 // RenderFor renders the message for other users to see.
@@ -134,7 +135,7 @@ func (m PublicMsg) RenderSelf(cfg UserConfig) string {
 	if cfg.Theme == nil {
 		return fmt.Sprintf("[%s] %s", m.from.Name(), m.body)
 	}
-	return fmt.Sprintf("[%s] %s", cfg.Theme.ColorName(m.from), m.body)
+	return fmt.Sprintf("[%s] %s", cfg.Theme.ColorName(m.from), color_tags.ParseColorTags(m.body))
 }
 
 func (m PublicMsg) String() string {
