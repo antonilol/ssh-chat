@@ -91,6 +91,9 @@ func parseTag(i string) string {
 				first = false
 			}
 			res += z;
+		} else {
+			first = true
+			break
 		}
 	}
 	if first {

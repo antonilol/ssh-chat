@@ -12,7 +12,7 @@ import (
 	"github.com/antonilol/ssh-chat/set"
 )
 
-const historyLen = 20
+const historyLen = 50
 const roomBuffer = 10
 
 // ErrRoomClosed is the error returned when a message is sent to a room that is already
