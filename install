@@ -3,7 +3,7 @@
 # automatic clone, compile and install for lazy users :)
 # with a simple command:
 #
-#  curl https://raw.githubusercontent.com/antonilol/ssh-chat/master/install.sh | bash
+#  curl https://raw.githubusercontent.com/antonilol/ssh-chat/master/install | bash
 #
 
 

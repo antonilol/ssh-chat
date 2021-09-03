@@ -30,15 +30,12 @@ When submitting code, you should, in your commit message, refer to which issue y
 Once submitted, the code must meet the following conditions in order to be accepted:
 * Code must be formatted using `gofmt`
 * Code must pass code review
-* Code must pass the Travis CI testing stage
+* Code must pass the Github Workflow testing stage
 
 If the code meets these conditions, then it will be merged into the `master` branch.
 
 
 ### Discussion Channels
 
-Development discussion of `ssh-chat` can be found on Shazow's public `ssh-chat` server. Connect using any `ssh` client with the following:
+Development discussion of `antonilol/ssh-chat` can be found on in the [Discussions](https://github.com/antonilol/ssh-chat/discussions) tab of this repo.
 
-```bash
-$ ssh username@chat.shazow.net
-```
