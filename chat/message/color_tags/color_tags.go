@@ -2,6 +2,7 @@ package color_tags
 
 import (
 	"strings"
+	"regexp"
 )
 
 var colors = map[string]string {
@@ -76,6 +77,10 @@ var colors = map[string]string {
 
 	"reversed": "7",
 	"rv": "7",
+
+	"rgb": "38;2",
+	"rgbfg": "38;2",
+	"rgbbg": "48;2",
 }
 
 func parseTag(i string) string {
@@ -90,7 +95,14 @@ func parseTag(i string) string {
 			} else {
 				first = false
 			}
-			res += z;
+			res += z
+		} else if m, _ := regexp.MatchString("[0-9]+", v); m {
+			if !first {
+				res += ";"
+			} else {
+				first = false
+			}
+			res += v
 		} else {
 			first = true
 			break
