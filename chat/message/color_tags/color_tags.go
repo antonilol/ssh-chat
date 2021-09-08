@@ -59,6 +59,7 @@ var colors = map[string]string {
 	// special
 	"reset": "0",
 	"rs": "0",
+	"/": "0",
 
 	"bold": "1",
 	"b": "1",
@@ -118,15 +119,19 @@ func ParseColorTags(msg string) string {
 	p := ""
 	in_tag := false
 	t := ""
-	for _, r := range msg {
+	for i, r := range msg {
 		if r == '<' && !in_tag {
 			in_tag = true
 			p += t
 			t = ""
-		} else if r == '>' && in_tag {
-			in_tag = false
-			p += parseTag(t)
-			t = ""
+		} else if r == '>' {
+			if in_tag {
+				in_tag = false
+				p += parseTag(t)
+				t = ""
+			} else if i == 0 {
+				return msg
+			}
 		} else {
 			t += string(r)
 		}
