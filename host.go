@@ -203,10 +203,10 @@ func (h *Host) Connect(term *sshd.Terminal) {
 			//user.Send(message.NewSystemMsg("Message rejected: Rate limiting is in effect.", user))
 			//continue
 		//}
-		if len(line) > maxInputLength {
-			user.Send(message.NewSystemMsg("Message rejected: Input too long.", user))
-			continue
-		}
+		//if len(line) > maxInputLength {
+		//	user.Send(message.NewSystemMsg("Message rejected: Input too long.", user))
+		//	continue
+		//}
 		if line == "" {
 			// Silently ignore empty lines.
 			term.Write([]byte{})
